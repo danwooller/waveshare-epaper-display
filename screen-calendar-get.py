@@ -101,7 +101,7 @@ def get_output_dict_by_events(events, event_slot_count):
 def get_datetime_formatted(event_start):
     if(event_start.get('dateTime')):
         start = event_start.get('dateTime')
-        day = time.strftime("%a %b %-d, %-I:%M %p", time.strptime(start,"%Y-%m-%dT%H:%M:%S%z"))
+        day = time.strftime("%a %b %-d, %H:%M", time.strptime(start,"%Y-%m-%dT%H:%M:%S%z"))
     else:
         start = event_start.get('date')
         day = time.strftime("%a %b %-d", time.strptime(start, "%Y-%m-%d"))

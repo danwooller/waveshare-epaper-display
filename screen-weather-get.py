@@ -205,7 +205,7 @@ def main():
         'HIGH_ONE': "{}{}".format(str(round(weather['temperatureMax'])), degrees),
         'ICON_ONE': get_icon_by_weathercode(weather['weatherCode'], is_daytime(location_lat, location_long)),
         'WEATHER_DESC': get_description_by_weathercode(weather['weatherCode']),
-        'TIME_NOW': datetime.datetime.now().strftime("%-I:%M %p"),
+        'TIME_NOW': datetime.datetime.now().strftime("%H:%M"),
         'DAY_ONE': datetime.datetime.now().strftime("%b %-d, %Y"),
         'DAY_NAME': datetime.datetime.now().strftime("%A"),
         'ALERT_MESSAGE': "" # unused
