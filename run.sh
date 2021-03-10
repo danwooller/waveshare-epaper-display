@@ -13,10 +13,14 @@ function log {
 }
 
 log "Get Weather info"
-python3 screen-weather-get.py
+timeout $TIMEOUT python3 screen-weather-get.py || \
+    timeout $TIMEOUT python3 screen-weather-get.py || \
+    timeout $TIMEOUT python3 screen-weather-get.py || exit 1
 
 log "Get Calendar info"
-python3 screen-calendar-get.py
+timeout $TIMEOUT python3 screen-calendar-get.py || \
+    timeout $TIMEOUT python3 screen-calendar-get.py || \
+    timeout $TIMEOUT python3 screen-calendar-get.py || exit 1
 
 log "Export to PNG"
 
@@ -28,7 +32,7 @@ else
     WAVESHARE_HEIGHT=480
 fi
 
-inkscape screen-output-weather.svg --without-gui -e screen-output.png -w$WAVESHARE_WIDTH -h$WAVESHARE_HEIGHT --export-dpi=300
+inkscape screen-output-calendar.svg --without-gui -e screen-output.png -w$WAVESHARE_WIDTH -h$WAVESHARE_HEIGHT --export-dpi=300
 
 log "Separate black/red channels"
 convert screen-output.png -channel R -separate only_black.png
