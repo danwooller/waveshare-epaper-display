@@ -1,3 +1,4 @@
+#!/bin/bash
 
 . env.sh
 
@@ -25,5 +26,18 @@ fi
 
 inkscape screen-output-weather.svg --without-gui -e screen-output.png -w$WAVESHARE_WIDTH -h$WAVESHARE_HEIGHT --export-dpi=300
 
+log "Separate black/red channels"
+convert screen-output.png -channel R -separate only_black.png
+pngtopnm screen-output.png > screen-output.pnm
+pngtopnm only_black.png > only_black.pnm
+ppmtopgm only_black.pnm | pnmsmooth | pgmtopbm -threshold -value 0.9999 | pbmmask > mask.pbm
+pnminvert mask.pbm > mask_invert.pbm
+pnmcomp -alpha=mask_invert.pbm mask_invert.pbm screen-output.pnm only_red.pnm
+pnmtopng only_red.pnm > only_red.png
+
+# Convert to a black and white, 1 bit bitmap
+convert -colors 2 +dither -type Bilevel -monochrome only_red.png only_red.bmp
+convert -colors 2 +dither -type Bilevel -monochrome only_black.png only_black.bmp
+
 log "Display on epaper"
-python3 display.py screen-output.png
+python3 display.py only_black.bmp only_red.bmp
