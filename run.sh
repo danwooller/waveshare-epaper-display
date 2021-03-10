@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd /home/pi/waveshare-epaper-display
+
+(
+set -x
 . env.sh
 
 function log {
@@ -41,3 +45,5 @@ convert -colors 2 +dither -type Bilevel -monochrome only_black.png only_black.bm
 
 log "Display on epaper"
 python3 display.py only_black.bmp only_red.bmp
+
+) 2>&1 | tee -a LOG
