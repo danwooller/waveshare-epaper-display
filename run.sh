@@ -32,7 +32,7 @@ else
     WAVESHARE_HEIGHT=480
 fi
 
-inkscape screen-output-calendar.svg --without-gui -e screen-output.png -w$WAVESHARE_WIDTH -h$WAVESHARE_HEIGHT --export-dpi=300
+inkscape screen-output-weather.svg --without-gui -e screen-output.png -w$WAVESHARE_WIDTH -h$WAVESHARE_HEIGHT --export-dpi=300
 
 log "Separate black/red channels"
 convert screen-output.png -channel R -separate only_black.png
