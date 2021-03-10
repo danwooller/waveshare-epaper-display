@@ -9,13 +9,6 @@ The screen will display date, time, weather icon with high and low, Google Calen
 [Raspberry Pi Zero WH (presoldered header)](https://www.amazon.co.uk/gp/product/B07BHMRTTY/)  
 [microSDHC card](https://www.amazon.co.uk/gp/product/B073K14CVB)
 
-## Setup the PI
-
-### Prepare the Pi
-
-I've got a separate post for this, [prepare the Raspberry Pi with WiFi and SSH](https://code.mendhak.com/prepare-raspberry-pi/).  Once the Pi is set up, and you can access it, come back here. 
-
-
 ### Connect the display
 
 Turn the Pi off, then put the HAT on top of the Pi's GPIO pins.  
@@ -48,7 +41,7 @@ Connect the ribbon from the epaper display to the extension.  To do this you wil
 git clone this repository in the `/home/pi` directory.
 
     cd /home/pi
-    git clone --recursive https://github.com/mendhak/waveshare-epaper-display.git
+    git clone --recursive https://github.com/danwooller/waveshare-epaper-display.git
     
 This should create a `/home/pi/waveshare-epaper-display` directory. 
 

@@ -20,9 +20,9 @@ try:
     epd = epd7in5.EPD()
     logging.debug("Initialize screen")
     epd.init()
-	
-	#Full  screen refresh
-	epd.Clear()
+
+    #Full  screen refresh
+    epd.Clear()
 
     #Full screen refresh at 2 AM
     #if datetime.datetime.now().minute==0 and datetime.datetime.now().hour==2:
