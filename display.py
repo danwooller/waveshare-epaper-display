@@ -34,7 +34,7 @@ try:
     red_image = Image.open(sys.argv[2])
 
     logging.info("Display image file on screen")
-    epd.display(epd.getbuffer(Himage))
+    epd.display(epd.getbuffer(black_image), epd.getbuffer(red_image))
     epd.sleep()
     epd.Dev_exit()
 
