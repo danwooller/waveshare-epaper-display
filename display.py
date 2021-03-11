@@ -21,13 +21,12 @@ try:
     logging.debug("Initialize screen")
     epd.init()
 
-    #Full  screen refresh
-    epd.Clear()
-
     #Full screen refresh at 2 AM
     #if datetime.datetime.now().minute==0 and datetime.datetime.now().hour==2:
     #    logging.debug("Clear screen")
     #    epd.Clear()
+
+    epd.Clear()
 
     logging.debug("Read images")
     black_image = Image.open(sys.argv[1])
