@@ -91,7 +91,7 @@ def get_output_dict_by_events(events, event_slot_count):
         event_label_id = str(event_i + 1)
         if (event_i <= event_count - 1):
             formatted_events['CAL_DATETIME_' + event_label_id] = get_datetime_formatted(events[event_i]['start'])
-            formatted_events['CAL_DESC_' + event_label_id] = events[event_i]['summary']
+            formatted_events['CAL_DESC_' + event_label_id] = smart_truncate(events[event_i]['summary'])
         else:
             formatted_events['CAL_DATETIME_' + event_label_id] = ""
             formatted_events['CAL_DESC_' + event_label_id] = ""
@@ -106,6 +106,12 @@ def get_datetime_formatted(event_start):
         start = event_start.get('date')
         day = time.strftime("%a %b %-d", time.strptime(start, "%Y-%m-%d"))
     return day
+
+def smart_truncate(content, length=25, suffix=' ...'):
+    if len(content) <= length:
+        return content
+    else:
+        return ' '.join(content[:length+1].split(' ')[0:-1]) + suffix
 
 def main():
 
