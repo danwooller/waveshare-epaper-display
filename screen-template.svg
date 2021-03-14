@@ -694,7 +694,7 @@
     </g>
 
 
-    <text id="alertmessage" x="0" y="55" font-size="30px" style="font-weight:bolder;font-size:30px;line-height:0%;font-family:'Nimbus Mono L';fill:red;text-anchor:beginning">ALERT_MESSAGE</text>
+    <text id="alertmessage" x="0" y="55" font-size="30px" style="font-weight:bolder;font-size:30px;line-height:0%;font-family:'Tahoma';fill:red;text-anchor:beginning">ALERT_MESSAGE</text>
     <text id="temphighlow" x="155" y="360" font-size="38px" style="font-size:38px;line-height:0%;font-family:'Nimbus Sans L';fill:red;text-anchor:middle">HIGH_ONE/LOW_ONE</text>
     <text id="temphighlow" x="155" y="390" font-size="38px" style="font-size:25px;line-height:0%;font-family:'Nimbus Sans L';fill:red;text-anchor:middle">WEATHER_DESC</text>
     <path d="m 301.08466,394.8254 v 70 h 3 v -235.5 h -3 z" id="divider" inkscape:connector-curvature="0" />
