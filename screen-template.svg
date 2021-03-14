@@ -713,17 +713,17 @@
         <tspan style="font-weight:bold;fill:red;" x="330" dy="25">CAL_DESC_1</tspan>
     </text>
 
-    <text id="calendarentry2" x="330" y="310" font-size="25px" style="font-size:29px;line-height:0%;font-family:'Tahoma';text-anchor:beginning">
+    <text id="calendarentry2" x="330" y="308" font-size="25px" style="font-size:29px;line-height:0%;font-family:'Tahoma';text-anchor:beginning">
         <tspan x="330" dy="25" style="font-size:21px;">CAL_DATETIME_2</tspan>
         <tspan style="font-weight:bold;fill:red;" x="330" dy="25">CAL_DESC_2</tspan>
     </text>
 
-    <text id="calendarentry3" x="330" y="365" font-size="25px" style="font-size:29px;line-height:0%;font-family:'Tahoma';text-anchor:beginning">
+    <text id="calendarentry3" x="330" y="361" font-size="25px" style="font-size:29px;line-height:0%;font-family:'Tahoma';text-anchor:beginning">
         <tspan x="330" dy="25" style="font-size:21px;">CAL_DATETIME_3</tspan>
         <tspan style="font-weight:bold;fill:red;" x="330" dy="25">CAL_DESC_3</tspan>
     </text>
 
-    <text id="calendarentry4" x="330" y="420" font-size="25px" style="font-size:29px;line-height:0%;font-family:'Tahoma';text-anchor:beginning">
+    <text id="calendarentry4" x="330" y="414" font-size="25px" style="font-size:29px;line-height:0%;font-family:'Tahoma';text-anchor:beginning">
         <tspan x="330" dy="25" style="font-size:21px;">CAL_DATETIME_4</tspan>
         <tspan style="font-weight:bold;fill:red;" x="330" dy="25">CAL_DESC_4</tspan>
     </text>
