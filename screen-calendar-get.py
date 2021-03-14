@@ -107,7 +107,7 @@ def get_datetime_formatted(event_start):
         day = time.strftime("%a %b %-d", time.strptime(start, "%Y-%m-%d"))
     return day
 
-def smart_truncate(content, length=25, suffix=' ...'):
+def smart_truncate(content, length=20, suffix='...'):
     if len(content) <= length:
         return content
     else:
