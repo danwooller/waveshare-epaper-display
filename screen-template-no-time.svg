@@ -729,9 +729,9 @@
     </text>
 
 
-    <text id="textday" x="30" y="75" style="text-anchor:middle;font-weight:600;font-size:60px;line-height:0%;font-family:'Tahoma';">DAY_NAME</text>
+    <text id="textday" x="400" y="75" style="text-anchor:middle;font-weight:600;font-size:60px;fill:red;line-height:0%;font-family:'Tahoma';">DAY_NAME</text>
 
-    <text id="textdate" x="600" y="75" style="text-anchor:middle;font-size:60px;line-height:0%;font-family:'Tahoma';">DAY_ONE</text>
+    <text id="textdate" x="400" y="140" style="text-anchor:middle;font-size:50px;line-height:0%;font-family:'Tahoma';">DAY_ONE</text>
 
     <!--text id="texttime" x="30" y="125" font-size="100px" style="font-weight:bold;font-size:100px;fill:red;line-height:0%;font-family:'Tahoma';text-anchor:beginning">TIME_NOW</text-->
 
