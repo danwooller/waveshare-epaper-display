@@ -174,7 +174,7 @@ def main():
     else:
         units = "imperial"
 
-    template_svg_filename = 'screen-template.svg'
+    template_svg_filename = 'screen-template-no-time.svg'
     output_svg_filename = 'screen-output-weather.svg'
 
     # json response files
